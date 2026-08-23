@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Safety Guardrail Evaluator"
+  short_description: "Evaluate content guardrails with labeled cases"
+  default_prompt: "Use $content-safety-guardrail-evaluator to evaluate allow, refuse, and redirect behavior against this policy."

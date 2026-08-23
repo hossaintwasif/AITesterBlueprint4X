@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prepare QA Audit Handoff"
+  short_description: "Prepare traceable QA audit handoff packages"
+  default_prompt: "Use $prepare-qa-audit-handoff to map this audit request to approved QA evidence and identify gaps."

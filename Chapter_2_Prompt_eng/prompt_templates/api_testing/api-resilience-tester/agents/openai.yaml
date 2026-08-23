@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Resilience Tester"
+  short_description: "Plan bounded API fault and retry testing"
+  default_prompt: "Use $api-resilience-tester to plan controlled retry timeout and failure tests for this API."

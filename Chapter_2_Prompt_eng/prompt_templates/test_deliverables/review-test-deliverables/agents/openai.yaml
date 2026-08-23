@@ -1,0 +1,4 @@
+interface:
+  display_name: "Review Test Deliverables"
+  short_description: "Review QA deliverables for evidence and gaps"
+  default_prompt: "Use $review-test-deliverables to review these QA artifacts for completeness, consistency, and traceability."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Curate Test Evidence Bundle"
+  short_description: "Package reproducible sanitized test evidence"
+  default_prompt: "Use $curate-test-evidence-bundle to inventory, validate, and sanitize this test evidence."

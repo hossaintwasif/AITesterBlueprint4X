@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Contract Validator"
+  short_description: "Validate observed API traffic against contracts"
+  default_prompt: "Use $api-contract-validator to compare this captured API exchange with its contract."

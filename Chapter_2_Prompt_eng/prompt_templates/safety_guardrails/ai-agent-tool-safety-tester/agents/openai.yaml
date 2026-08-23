@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Agent Tool Safety Tester"
+  short_description: "Test agent tool permissions and side effects"
+  default_prompt: "Use $ai-agent-tool-safety-tester to verify this AI agent's tool authorization and confirmation controls."

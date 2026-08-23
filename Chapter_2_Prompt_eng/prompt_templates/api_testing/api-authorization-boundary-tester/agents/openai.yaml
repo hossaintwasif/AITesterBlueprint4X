@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Authorization Boundary Tester"
+  short_description: "Test API role, tenant, and ownership boundaries"
+  default_prompt: "Use $api-authorization-boundary-tester to build a safe access-control test matrix for this API."

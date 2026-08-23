@@ -1,0 +1,4 @@
+interface:
+  display_name: "Assemble Release Decision Record"
+  short_description: "Record evidence-based release decisions"
+  default_prompt: "Use $assemble-release-decision-record to map exit criteria and record the authorized human release decision."

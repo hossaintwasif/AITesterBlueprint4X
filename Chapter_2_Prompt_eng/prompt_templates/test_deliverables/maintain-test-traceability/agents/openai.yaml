@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Test Traceability"
+  short_description: "Build and update evidence-linked traceability"
+  default_prompt: "Use $maintain-test-traceability to map and verify links from requirements through execution evidence."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Draft Test Status Brief"
+  short_description: "Draft factual stakeholder test status briefs"
+  default_prompt: "Use $draft-test-status-brief to create an as-of test update from these approved records."

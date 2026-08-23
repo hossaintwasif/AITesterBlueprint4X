@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Fairness and Bias Evaluator"
+  short_description: "Evaluate AI behavior for fairness and bias"
+  default_prompt: "Use $ai-fairness-bias-evaluator to plan paired fairness tests with approved data and metrics."

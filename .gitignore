@@ -1,0 +1,12 @@
+target/
+.idea/
+*.iml
+*.class
+*.jar
+*.log
+.DS_Store
+.vscode/
+.env
+config.json
+__pycache__/
+.commandcode/

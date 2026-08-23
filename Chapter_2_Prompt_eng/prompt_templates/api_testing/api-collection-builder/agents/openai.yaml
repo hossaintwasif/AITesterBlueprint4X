@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Collection Builder"
+  short_description: "Build safe runnable API request collections"
+  default_prompt: "Use $api-collection-builder to turn these approved API cases into a runnable collection."

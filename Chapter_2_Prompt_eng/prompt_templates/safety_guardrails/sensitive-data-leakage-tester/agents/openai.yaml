@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sensitive Data Leakage Tester"
+  short_description: "Test AI outputs for sensitive-data leakage"
+  default_prompt: "Use $sensitive-data-leakage-tester to plan synthetic-canary leakage tests across this AI system."

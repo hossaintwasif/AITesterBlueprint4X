@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Performance Test Planner"
+  short_description: "Plan safe evidence-based API performance tests"
+  default_prompt: "Use $api-performance-test-planner to create a review-ready workload and performance test plan."

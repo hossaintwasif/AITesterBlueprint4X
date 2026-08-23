@@ -1,0 +1,4 @@
+interface:
+  display_name: "API Workflow Tester"
+  short_description: "Test stateful multi-endpoint API workflows"
+  default_prompt: "Use $api-workflow-tester to design tests for this multi-step API lifecycle."

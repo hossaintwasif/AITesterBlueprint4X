@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI Threat Modeler"
+  short_description: "Model AI system threats and test priorities"
+  default_prompt: "Use $ai-threat-modeler to map this AI system attack surface and prioritize test charters."

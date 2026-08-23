@@ -1,0 +1,7 @@
+Role: [Expertise]
+Instructions: [Purpose]
+Context: [Background Info]
+Expected: [Success criteria]
+Parameters: [Constraints]
+Output: [Format]
+Task: [Specific Instruction]

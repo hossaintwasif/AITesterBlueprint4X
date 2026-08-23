@@ -1,0 +1,4 @@
+interface:
+  display_name: "Prompt Injection Resilience Tester"
+  short_description: "Test resistance to prompt injection attacks"
+  default_prompt: "Use $prompt-injection-resilience-tester to design an authorized prompt-injection evaluation."
