@@ -1,0 +1,76 @@
+{
+  "title": "Test Plan for KAN-1 - Task 1",
+  "scope": {
+    "in_scope": [
+      "Task 1 functionality as described in summary"
+    ],
+    "out_of_scope": [
+      "Any functionality not mentioned in the summary"
+    ],
+    "assumptions": [
+      "The system under test includes the feature referred to as Task 1",
+      "No additional business rules beyond the summary are required"
+    ]
+  },
+  "test_strategy": "The plan includes a smoke test to verify basic execution of Task 1, functional tests to cover typical usage, regression tests for future changes, and exploratory testing to discover unknown behaviors.",
+  "test_data": [
+    "N/A"
+  ],
+  "environment": [
+    "Standard test environment with default configuration"
+  ],
+  "scenarios": [
+    {
+      "title": "Execute Task 1",
+      "description": "Validate that the Task 1 operation can be performed successfully.",
+      "traceability": [
+        "summary: Task 1",
+        "requirement: Task 1"
+      ],
+      "test_cases": [
+        {
+          "preconditions": [
+            "User is logged into the application",
+            "Application is in a stable state"
+          ],
+          "steps": [
+            "Open the application",
+            "Navigate to the Task 1 screen",
+            "Initiate Task 1",
+            "Confirm the action"
+          ],
+          "expected_result": "Task 1 completes and displays a success confirmation.",
+          "test_data": null,
+          "priority": "low",
+          "automation_candidate": true,
+          "traceability": [
+            "summary: Task 1",
+            "requirement: Task 1"
+          ],
+          "case_id": "TC-01.01"
+        }
+      ],
+      "scenario_id": "SC-01"
+    }
+  ],
+  "traceability_matrix": [
+    {
+      "requirement": "Task 1",
+      "case_ids": [
+        "KAN-1.TC-01"
+      ]
+    }
+  ],
+  "low_confidence_notes": [
+    "Acceptance criteria are missing from the issue",
+    "Priority field is empty, defaulting to low priority",
+    "Detailed functional description beyond the summary is not provided"
+  ],
+  "source_jira_id": "KAN-1",
+  "plan_id": "TP-KAN-1",
+  "generated_at": "2026-09-04T23:13:13",
+  "author": "AI Test Plan Agent",
+  "version": "1.0",
+  "model": "openai/gpt-oss-120b",
+  "constitution_version": "0.3"
+}

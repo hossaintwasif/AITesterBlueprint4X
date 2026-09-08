@@ -1,0 +1,4 @@
+Whenever you need to start it again yourself, run these from Chapter_07_AiAgents\Test_Plan_Agent_BLAST:
+
+  cd Chapter_07_AiAgents\Test_Plan_Agent_BLAST
+    python -m streamlit run src/app.py

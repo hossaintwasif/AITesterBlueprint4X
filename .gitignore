@@ -10,3 +10,8 @@ target/
 config.json
 __pycache__/
 .commandcode/
+
+# Personal data — resumes, specs, and tailored output
+chapter_04_JobKitAI/output/
+.specs/
+.tmp/
