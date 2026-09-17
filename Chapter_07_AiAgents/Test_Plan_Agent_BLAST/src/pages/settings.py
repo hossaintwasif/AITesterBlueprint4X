@@ -12,12 +12,12 @@ from jira_client import (  # noqa: E402
     AuthenticationError,
     ConnectionError,
 )
-from llm_client import test_connection as test_groq_connection, LLMError  # noqa: E402
+from llm_client import test_connection as test_openai_connection, LLMError  # noqa: E402
 
 st.set_page_config(page_title="Settings — AI Test Plan Agent", page_icon="⚙️", layout="centered")
 
 st.title("⚙️ Settings")
-st.caption("Configure Jira and Groq. Both connection tests run against the values typed below (saved first).")
+st.caption("Configure Jira and OpenAI. Both connection tests run against the values typed below (saved first).")
 
 config = load_config()
 
@@ -61,24 +61,24 @@ if st.button("🔌 Test Jira Connection"):
 
 st.markdown("---")
 
-st.subheader("🤖 Groq (LLM)")
-groq_key = st.text_input(
-    "Groq API Key",
-    value=config.get("groq_api_key", ""),
+st.subheader("🤖 OpenAI (LLM)")
+openai_key = st.text_input(
+    "OpenAI API Key",
+    value=config.get("openai_api_key", ""),
     type="password",
-    help="Get your key at https://console.groq.com/keys",
+    help="Get your key at https://platform.openai.com/api-keys",
 )
-groq_model = st.text_input(
-    "Groq Model",
-    value=config.get("groq_model", "openai/gpt-oss-120b"),
-    help="Default: openai/gpt-oss-120b",
+openai_model = st.text_input(
+    "OpenAI Model",
+    value=config.get("openai_model", "gpt-4o-mini"),
+    help="Default: gpt-4o-mini",
 )
 
-if st.button("🔌 Test Groq Connection"):
-    save_config({**config, "groq_api_key": groq_key, "groq_model": groq_model})
+if st.button("🔌 Test OpenAI Connection"):
+    save_config({**config, "openai_api_key": openai_key, "openai_model": openai_model})
     try:
-        reply = test_groq_connection()
-        st.success(f"Groq connected — model replied: **{reply}**")
+        reply = test_openai_connection()
+        st.success(f"OpenAI connected — model replied: **{reply}**")
     except LLMError as e:
         st.error(str(e))
 
@@ -90,8 +90,8 @@ if st.button("💾 Save Settings", type="primary"):
             "jira_base_url": jira_base_url,
             "jira_email": jira_email,
             "jira_api_token": jira_token,
-            "groq_api_key": groq_key,
-            "groq_model": groq_model,
+            "openai_api_key": openai_key,
+            "openai_model": openai_model,
         }
     )
     st.success("Settings saved! Go back to the chat to generate test plans.")
@@ -100,5 +100,5 @@ if st.button("💾 Save Settings", type="primary"):
 st.markdown("---")
 st.caption(
     "Settings persist in `config.json` (git-ignored). Values from `.env` seed the defaults. "
-    "Credentials are never sent anywhere except Jira and Groq."
+    "Credentials are never sent anywhere except Jira and OpenAI."
 )

@@ -25,14 +25,14 @@ with st.sidebar:
     st.markdown("## ⚙️ Status")
     config = load_config()
     jira_url = config.get("jira_base_url", "")
-    groq_key = config.get("groq_api_key", "")
+    openai_key = config.get("openai_api_key", "")
     st.caption(f"**Jira:** {jira_url or 'Not configured'}")
-    st.caption(f"**Groq:** {'Configured' if groq_key else 'Missing API key'}")
-    st.caption(f"**Model:** {config.get('groq_model', 'openai/gpt-oss-120b')}")
+    st.caption(f"**OpenAI:** {'Configured' if openai_key else 'Missing API key'}")
+    st.caption(f"**Model:** {config.get('openai_model', 'gpt-4o-mini')}")
     if not jira_url or not config.get("jira_email") or not config.get("jira_api_token"):
         st.warning("Configure Jira in Settings →")
-    if not groq_key:
-        st.warning("Configure Groq in Settings →")
+    if not openai_key:
+        st.warning("Configure OpenAI in Settings →")
     st.markdown("---")
     st.page_link("pages/settings.py", label="⚙️ Settings", icon="⚙️")
     st.markdown("---")

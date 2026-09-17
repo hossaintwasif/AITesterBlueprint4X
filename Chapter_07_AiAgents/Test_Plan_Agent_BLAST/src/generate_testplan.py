@@ -52,7 +52,7 @@ def _clean_json(text: str) -> str:
     start = text.find("{")
     end = text.rfind("}")
     if start == -1 or end == -1 or end <= start:
-        raise SchemaValidationError("Groq output contains no JSON object.")
+        raise SchemaValidationError("LLM output contains no JSON object.")
     return text[start : end + 1]
 
 
@@ -117,7 +117,7 @@ def _validate(plan: dict) -> list[str]:
 
 
 def generate_testplan(normalized: dict, model_label: str) -> dict:
-    """Call Groq, parse, validate, and backfill the TestPlan JSON (llm.md §1.3)."""
+    """Call the LLM, parse, validate, and backfill the TestPlan JSON (llm.md §1.3)."""
     user_prompt = json.dumps(normalized, indent=2, ensure_ascii=False)
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
@@ -150,13 +150,13 @@ def generate_testplan(normalized: dict, model_label: str) -> dict:
             plan = json.loads(_clean_json(raw2))
         except (json.JSONDecodeError, SchemaValidationError) as e:
             raise SchemaValidationError(
-                "Groq output failed schema validation twice. Last error: "
+                "LLM output failed schema validation twice. Last error: "
                 + "; ".join(errors + [str(e)])
             )
         errors = _validate(plan)
         if errors:
             raise SchemaValidationError(
-                "Groq output still invalid after retry: " + "; ".join(errors)
+                "LLM output still invalid after retry: " + "; ".join(errors)
             )
 
     _backfill_ids(plan)

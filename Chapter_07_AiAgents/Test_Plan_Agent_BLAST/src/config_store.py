@@ -12,8 +12,8 @@ DEFAULTS = {
     "jira_base_url": "",
     "jira_email": "",
     "jira_api_token": "",
-    "groq_api_key": "",
-    "groq_model": "openai/gpt-oss-120b",
+    "openai_api_key": "",
+    "openai_model": "gpt-4o-mini",
 }
 
 
@@ -30,8 +30,8 @@ def load_config() -> dict:
         "jira_base_url": "JIRA_BASE_URL",
         "jira_email": "JIRA_Email",
         "jira_api_token": "JIRA_API_TOKEN",
-        "groq_api_key": "GROQ_API_KEY",
-        "groq_model": "GROQ_MODEL",
+        "openai_api_key": "OPENAI_API_KEY",
+        "openai_model": "OPENAI_MODEL",
     }
     for key, env_var in env_map.items():
         if not config.get(key):

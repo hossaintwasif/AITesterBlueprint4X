@@ -47,7 +47,7 @@ def render_markdown(plan: dict) -> str:
         f"| Generated At | {plan.get('generated_at', '')} |",
         f"| Author | {plan.get('author', 'AI Test Plan Agent')} |",
         f"| Version | {plan.get('version', '1.0')} |",
-        f"| Model | {plan.get('model', 'Groq')} |",
+        f"| Model | {plan.get('model', 'LLM')} |",
         "",
         "## 1. Scope",
         "",
