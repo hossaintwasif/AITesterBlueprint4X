@@ -1,0 +1,15 @@
+Command to start the N8N locally 
+
+1. Install Node.js
+
+You need Node.js and npm installed first.
+Check whether you already have them:
+node --version
+npm --version
+
+
+2. Run n8n with npx
+
+Open your terminal and execute:
+npx n8n
+The first time, npx downloads the required n8n package and starts the application.
